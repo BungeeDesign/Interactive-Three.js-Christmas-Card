@@ -1,0 +1,138 @@
+// Font imports
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Oleo+Script');
+
+// Vars
+$kaushan: 'Kaushan Script', cursive;
+$oleo: 'Oleo Script', cursive;
+
+
+
+body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-image: url(../assets/images/starfeildbg.png);
+    cursor: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.devCamControl {
+    -webkit-user-drag: auto;
+    background: black;
+    position: absolute;
+    color: white;
+    font-family: monospace;
+    padding: 10px;
+    display: none;
+}
+
+.devCamControl input {
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+}
+
+.cursor {
+    position: absolute;
+    pointer-events: none;
+    font-size: 50px;
+}
+
+.endSceneContainer {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    position: absolute;
+    display: block;
+    text-align: center;
+    margin-top: 400px;
+    font-family: $oleo;
+    font-size: 40px;
+    color: white;
+    transition: 1.5s cubic-bezier(0, 0.75, 0.35, 1.07);
+    transform: scale(1) translateY(-600px);
+}
+
+.endSceneActive {
+    transform: scale(1) translateY(0px);
+}
+
+.sendCard {
+    position: relative;
+    transition: .5s ease;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.preloader {
+    transition: 2.5s ease;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: #080808;
+    color: white;
+    font-size: 60px;
+    font-family: $oleo;
+}
+
+.preloaderOut {
+    transform: translateX(-2600px);
+    opacity: 0;
+}
+
+.preloaderContent {
+    text-align: center;
+    margin-top: 450px;
+}
+
+.playBtn {
+    transform: scale(1);
+    transition: .5s ease;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.playBtnOut {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.loader {
+    transition: .5s ease;
+    transform: scale(0);
+}
+
+.loaderActive {
+    transform: scale(1);
+}
+
+.loadingBar {
+    width: 500px;
+    height: auto;
+    background: white;  /* fallback for old browsers */
+    border-radius: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.loadingBarFill {
+    // transform: scaleX(0);
+    color: black;
+    transition: .5s ease;
+    width: 0px;
+    height: auto;
+    background: #e53935;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e35d5b, #e53935);
+    background: linear-gradient(to right, #e35d5b, #e53935);
+    border-radius: 100px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: monospace;
+}
+

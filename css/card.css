@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Oleo+Script");
+body {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  background-image: url(../assets/images/starfeildbg.png);
+  cursor: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.devCamControl {
+  -webkit-user-drag: auto;
+  background: black;
+  position: absolute;
+  color: white;
+  font-family: monospace;
+  padding: 10px;
+  display: none;
+}
+
+.devCamControl input {
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+}
+
+.cursor {
+  position: absolute;
+  pointer-events: none;
+  font-size: 50px;
+}
+
+.endSceneContainer {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  position: absolute;
+  display: block;
+  text-align: center;
+  margin-top: 400px;
+  font-family: "Oleo Script", cursive;
+  font-size: 40px;
+  color: white;
+  -webkit-transition: 1.5s cubic-bezier(0, 0.75, 0.35, 1.07);
+  transition: 1.5s cubic-bezier(0, 0.75, 0.35, 1.07);
+  -webkit-transform: scale(1) translateY(-600px);
+          transform: scale(1) translateY(-600px);
+}
+
+.endSceneActive {
+  -webkit-transform: scale(1) translateY(0px);
+          transform: scale(1) translateY(0px);
+}
+
+.sendCard {
+  position: relative;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.sendCard:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.preloader {
+  -webkit-transition: 2.5s ease;
+  transition: 2.5s ease;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: #080808;
+  color: white;
+  font-size: 60px;
+  font-family: "Oleo Script", cursive;
+}
+
+.preloaderOut {
+  -webkit-transform: translateX(-2600px);
+          transform: translateX(-2600px);
+  opacity: 0;
+}
+
+.preloaderContent {
+  text-align: center;
+  margin-top: 450px;
+}
+
+.playBtn {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.playBtn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.playBtnOut {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+.loader {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.loaderActive {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.loadingBar {
+  width: 500px;
+  height: auto;
+  background: white;
+  /* fallback for old browsers */
+  border-radius: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.loadingBarFill {
+  color: black;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  width: 0px;
+  height: auto;
+  background: #e53935;
+  /* fallback for old browsers */
+  background: -webkit-gradient(linear, left top, right top, from(#e35d5b), to(#e53935));
+  background: linear-gradient(to right, #e35d5b, #e53935);
+  border-radius: 100px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-family: monospace;
+}
+/*# sourceMappingURL=card.css.map */
